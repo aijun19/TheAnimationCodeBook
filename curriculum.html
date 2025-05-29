@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Animation Codebook</title>
+  <link rel="stylesheet" href="curriculum.css" />
+</head>
+<body>
+<header>
+  <a href="index.html" style="text-decoration: none; color: inherit;">
+    <h1>The Animation Codebook</h1>
+  </a>
+  <p class="subtitle">A project designed to enhance technical skills for those with a background in animation</p>
+  <nav class="top-nav">
+    <a href="curriculum.html">Curriculum</a>
+    <a href="student.html">Student Work</a>
+  </nav>
+</header>
+
+  <main>
+    <div class="content-container">
+
+      <!-- Lesson 1: Oscillating Motion -->
+      <div class="block">
+      <iframe src="https://editor.p5js.org/arajkumar/full/rVRkq2h7K"></iframe>        <div class="text-block">
+          <h2>LESSON 1: SINE AND CONSINE</h2>
+          <p><strong>Objective:</strong> To understand and visualise smooth oscillating motion using sine and cosine functions, useful for natural & rhythmic animations.</p>
+          <p><strong>Concept Overview:</strong> Sine and cosine functions generate smooth, periodic oscillations, which can be mapped to position / rotation to create natural, repeating movements. These functions cycle between -1 and 1 continuously, allowing for a fluid back-and-forth or up-and-down motion.</p>
+          <p><strong>Step-by-Step Approach:</strong></p>
+          <ul>
+            <li>Define animation parameters: Initialise variables to control amplitude (motion size), frequency (speed), and phase (starting position).</li>
+            <li>Calculate position: Use sin() or cos() functions with a time variable (usually frame count or elapsed time) to compute the oscillating value.</li>
+            <li>Map sine output: Scale the sine output to the desired range on the screen, e.g., vertical or horizontal movement limits.</li>
+            <li>Draw the object: Render a shape (like a circle) at the calculated position to visualise the oscillation.</li>
+            <li>Animate over time: Increment the time variable continuously to produce ongoing smooth motion.</li>
+          </ul>
+          <p><strong>Animation Applications:</strong></p>
+          <ul>
+            <li>Breathing effects</li>
+            <li>Walk cycles (limb oscillations)</li>
+            <li>Any repetitive, rhythmic motion that requires smooth transitions</li>
+          </ul>
+          <p><strong>Tips for Experimentation:</strong></p>
+          <ul>
+            <li>Vary amplitude to change motion size.</li>
+            <li>Adjust frequency to speed up or slow down oscillations.</li>
+            <li>Combine sine and cosine for complex paths or phase shifts.</li>
+            <li>Layer multiple waves for more natural or complex effects.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Lesson 2: Brownian Motion -->
+      <div class="block">
+        <div class="text-block">
+          <h2>LESSON 2: BROWNIAN MOTION</h2>
+          <p><strong>Objective:</strong> To simulate natural, random, jittery movement to create organic, unpredictable animation effects.</p>
+          <p><strong>Concept Overview:</strong> Brownian motion models the random motion of particles suspended in fluid, resulting in erratic and jittery paths. In animation, it’s a simple but powerful technique to simulate unpredictable, organic movement.</p>
+          <p><strong>Step-by-Step Approach:</strong></p>
+          <ul>
+            <li>Set up the canvas</li>
+            <li>Initialise position: Start with an object at a fixed or random position.</li>
+            <li>Apply random movement: Each frame, add a small random offset to the object’s position (both x and y).</li>
+            <li>Update continuously: Animate by updating the position every frame, producing a “drunken walk” effect.</li>
+          </ul>
+          <p><strong>Animation Applications:</strong></p>
+          <ul>
+            <li>Dust particles drifting in the air</li>
+            <li>Small animals or insects jittery movement</li>
+            <li>Leaf fluttering</li>
+          </ul>
+          <p><strong>Tips for Experimentation:</strong></p>
+          <ul>
+            <li>Adjust size of the random offset to control jitteriness intensity.</li>
+            <li>Combine Brownian motion with other motion types for more complex behavior.</li>
+            <li>Use Brownian motion to add subtle natural variation to otherwise smooth animations.</li>
+          </ul>
+        </div>
+        <iframe src="https://editor.p5js.org/arajkumar/full/itKDdvH_v"></iframe>
+      </div>
+
+      <!-- Lesson 3: Perlin Noise -->
+      <div class="block">
+        <iframe src="https://editor.p5js.org/arajkumar/full/9wsM-Uxs6"></iframe>
+        <div class="text-block">
+          <h2>LESSON 3: PERLIN NOISE</h2>
+          <p><strong>Objective:</strong> To generate smooth, flowing randomness for natural motion and organic shapes in animation.</p>
+          <p><strong>Concept Overview:</strong> Perlin noise produces coherent & smooth random values that vary gradually over space or time. Unlike pure random noise, Perlin noise avoids harsh jumps, creating fluid transitions ideal for natural effects.</p>
+          <p><strong>Step-by-Step Approach:</strong></p>
+          <ul>
+            <li>Define input variable: Use time or spatial coordinates as input to the noise function.</li>
+            <li>Sample noise: Call noise() with the input variable to get a smooth value between 0 and 1.</li>
+            <li>Map output: Scale the noise output to desired position, color, or shape ranges.</li>
+            <li>Animate: Increment input variable over time for continuous, smooth changes.</li>
+          </ul>
+          <p><strong>Animation Applications:</strong></p>
+          <ul>
+            <li>Flowing water or smoke</li>
+            <li>Cloud and fog textures</li>
+            <li>Natural terrain shapes like mountains or waves</li>
+          </ul>
+          <p><strong>Tips for Experimentation:</strong></p>
+          <ul>
+            <li>Use multiple dimensions of noise (1D, 2D, or 3D) for more complex animations.</li>
+            <li>Combine Perlin noise with oscillation for richer motion patterns.</li>
+            <li>Adjust the speed of input changes to control smoothness and speed.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Lesson 4: Fractal Brownian Motion -->
+      <div class="block">
+        <div class="text-block">
+          <h2>LESSON 4: FRACTAL BROWNIAN MOTION (fBm)</h2>
+          <p><strong>Objective:</strong> To create complex, detailed organic motion and textures by layering multiple octaves of Perlin noise.</p>
+          <p><strong>Concept Overview:</strong> Fractal Brownian Motion (fBm) layers several frequencies of Perlin noise, each with different amplitudes, to create richer and more natural-looking patterns. Think of it as combining big smooth waves with smaller ripples and tiny vibrations.</p>
+          <p><strong>Step-by-Step Approach:</strong></p>
+          <ul>
+            <li>Define noise layers: Sample Perlin noise at increasing frequencies (zooming in).</li>
+            <li>Weight layers: Apply decreasing amplitude to higher-frequency noise layers.</li>
+            <li>Sum layers: Combine weighted noise values for final output.</li>
+            <li>Animate: Increment base input over time for evolving, detailed motion.</li>
+          </ul>
+          <p><strong>Animation Applications:</strong></p>
+          <ul>
+            <li>Realistic ocean waves with texture</li>
+            <li>Wind-blown grass or hair detail</li>
+            <li>Wrinkled fabric or skin textures</li>
+            <li>Atmospheric effects like clouds and fog</li>
+          </ul>
+          <p><strong>Tips for Experimentation:</strong></p>
+          <ul>
+            <li>Adjust number of octaves and weights for different detail levels.</li>
+            <li>Mix with color or shape changes for richer effects.</li>
+            <li>Use as a base for procedural textures or terrains.</li>
+          </ul>
+        </div>
+        <iframe src="https://editor.p5js.org/arajkumar/full/IPbPtJ2LI"></iframe>
+      </div>
+
+      <!-- Lesson 5: Spring Dynamics -->
+      <div class="block">
+        <iframe src="https://editor.p5js.org/arajkumar/full/zGI0mY9Er"></iframe>
+        <div class="text-block">
+          <h2>LESSON 5: SPRING MOTION</h2>
+          <p><strong>Objective:</strong> To simulate realistic bouncy and elastic motion using physics-based spring and damping models.</p>
+          <p><strong>Concept Overview:</strong> A mass-spring system models objects connected to springs that exert restoring forces. When displaced, the system oscillates and gradually comes to rest due to damping, simulating realistic movement of limbs, hair, or soft materials.</p>
+          <p><strong>Step-by-Step Approach:</strong></p>
+          <ul>
+            <li>Initialise mass position, velocity, and acceleration.</li>
+            <li>Define spring parameters: Rest length, spring constant, and damping factor.</li>
+            <li>Calculate spring force: Apply Hooke’s law based on displacement from rest.</li>
+            <li>Update physics: Compute acceleration from force, update velocity and position.</li>
+            <li>Animate: Repeat physics update each frame for smooth spring motion.</li>
+          </ul>
+          <p><strong>Animation Applications:</strong></p>
+          <ul>
+            <li>Bouncy limbs in walk or run cycles</li>
+            <li>Hair, tails, or cloth movement</li>
+            <li>Elastic materials reacting to forces</li>
+            <li>Interactive objects with natural recoil</li>
+          </ul>
+          <p><strong>Tips for Experimentation:</strong></p>
+          <ul>
+            <li>Tweak spring constant and damping for stiffer or softer springs.</li>
+            <li>Add user interaction to drag or push the mass.</li>
+            <li>Chain multiple springs for complex systems.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      Curriculum materials are licensed under a 
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+       Creative Commons Attribution 4.0 International License
+      </a>. 
+      Free to use, share, and adapt with credit.
+    </p>
+  </footer>
+
+</body>
+</html>
+
+  <!-- Some code corrections were made with chatgpt assistance -->

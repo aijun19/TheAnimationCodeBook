@@ -1,0 +1,139 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: white; /* prevent content showing through */
+  z-index: 1000;
+  box-shadow: none;       /* no shadow */
+  border: none;           /* no border line */
+  outline: none;          /* no outline */
+}
+
+
+/* Since header is fixed, add top padding to main so content is not hidden under header */
+main {
+  padding: 100px 60px 60px; /* 100px here is enough space for header height */
+  /* You can adjust 100px depending on your actual header height */
+}
+
+
+.top-nav {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  font-family: inherit; /* same as the header */
+}
+iframe {
+  width: 50%;
+  height: 400px; /* or however tall you want */
+  border: none;
+}
+.top-nav a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.top-nav a:hover {
+  color: #555;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+header .subtitle {
+  margin-top: 8px;
+  font-size: 18px;
+  font-style: italic;
+  max-width: 600px;
+}
+
+
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px; /* optional extra spacing */
+
+  gap: 60px;
+}
+
+.block {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Odd blocks: iframe left, text right */
+.block:nth-child(odd) {
+  flex-direction: row;
+}
+
+/* Even blocks: iframe right, text left */
+.block:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.image {
+  width: 400px;
+  height: auto;
+}
+
+.text-block {
+  max-width: 520px; /* wider text box */
+}
+
+.text-block h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #f8f8f8;
+  padding: 20px 60px;
+  text-align: center;
+  font-size: 14px;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  border-top: 1px solid #ccc;
+}
+
+footer a {
+  color: black;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #555;
+}
+
+/* Layout update to ensure sticky footer if needed */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
