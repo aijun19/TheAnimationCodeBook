@@ -1,2 +1,2 @@
 # TheAnimationCodeBook
-Website Files for Project/Workshop Website
+Website for The Animation Codebook
